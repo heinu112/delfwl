@@ -36,9 +36,8 @@ if [ $systemcommand ];then
     yum remove -y firewalld
     yum install -y epel-release
     yum update -y
-	yum install -y iproute
-  elif [ $systemcommand == "apt" ]
-then
+    yum install -y iproute
+ else
     iptables -P INPUT ACCEPT
     iptables -P FORWARD ACCEPT
     iptables -P OUTPUT ACCEPT
