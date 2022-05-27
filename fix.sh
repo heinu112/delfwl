@@ -20,7 +20,7 @@ if [ $systemcommand ];then
   if [ `id -u` != 0 ];then
     echo -e "错误: 仅限 root 用户执行"
   fi
-  if [ $systemcommand == "yum" ]; then
+  if [ $systemcommand == "yum" ];then
     iptables -P INPUT ACCEPT
     iptables -P FORWARD ACCEPT
     iptables -P OUTPUT ACCEPT
