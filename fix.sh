@@ -1,5 +1,5 @@
 #!/bin/bash
-if [[ -f /etc/redhat-release ]]; then
+if [ -f /etc/redhat-release ];then
     systemcommand="yum"
 elif cat /etc/issue | grep -Eqi "debian"; then
     systemcommand="apt"
