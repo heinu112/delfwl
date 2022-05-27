@@ -37,7 +37,8 @@ if [ $systemcommand ];then
     yum install -y epel-release
     yum update -y
 	yum install -y iproute
-  elif $systemcommand == "apt";then
+  elif [ $systemcommand == "apt" ]
+then
     iptables -P INPUT ACCEPT
     iptables -P FORWARD ACCEPT
     iptables -P OUTPUT ACCEPT
